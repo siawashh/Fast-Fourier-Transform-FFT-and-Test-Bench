@@ -1,2 +1,15 @@
 # Fast-Fourier-Transform-FFT-and-Test-Bench
-A fast Fourier transform (FFT) is an algorithm that computes the discrete Fourier transform (DFT) of a sequence, or its inverse (IDFT). Fourier analysis converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa. The DFT is obtained by decomposing a sequence of values into components of different frequencies.[1] This operation is useful in many fields, but computing it directly from the definition is often too slow to be practical. An FFT rapidly computes such transformations by factorizing the DFT matrix into a product of sparse (mostly zero) factors.[2] As a result, it manages to reduce the complexity of computing the DFT from O ( N 2 ) {\displaystyle O\left(N^{2}\right)} {\displaystyle O\left(N^{2}\right)}, which arises if one simply applies the definition of DFT, to O ( N log ⁡ N ) {\displaystyle O(N\log N)} O(N\log N), where N {\displaystyle N} N is the data size. The difference in speed can be enormous, especially for long data sets where N may be in the thousands or millions. In the presence of round-off error, many FFT algorithms are much more accurate than evaluating the DFT definition directly or indirectly. There are many different FFT algorithms based on a wide range of published theories, from simple complex-number arithmetic to group theory and number theory. 
+#Fast Fourier Transform
+The "Fast Fourier Transform" (FFT) is an important measurement method in the science of audio and acoustics measurement. It converts a signal into individual spectral components and thereby provides frequency information about the signal.
+#How does an FFT work?
+The FFT operates by decomposing an N point time domain signal into N time domain signals each composed of a single point. The second step is to calculate the N frequency spectra corresponding to these N time domain signals. Lastly, the N spectra are synthesized into a single frequency spectrum.
+this code used Cooley Tukey algorithm
+#Cooley Tukey Fast Fourier Transform
+The Cooley-Tukey Fast Fourier Transform is often considered to be the most important numerical algorithm ever invented. This is the method typically referred to by the term “FFT.” The FFT can also be used for fast convolution, fast polynomial multiplication, and fast multiplication of large integers.
+for this case we used butterfly structure
+#butterfly structure
+In the context of fast Fourier transform algorithms, a butterfly is a portion of the computation that combines the results of smaller discrete Fourier transforms (DFTs) into a larger DFT, or vice versa (breaking a larger DFT up into subtransforms).
+# results are simulated via ISIM and match with MATLAB's result
+just code fft(x) in matlab
+# this is a synchronous and standard code with Synthesis Timing Report = 240.549MHz
+Synthesis Timing Report is not an accured timing report for recive accured timing report you must check static timing report
